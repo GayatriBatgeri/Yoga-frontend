@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js or index.js
+import React from "react";
+import ReactDOM from "react-dom";
+import Form from "./components/Form";
 
-function App() {
+export const App = () => {
+  const handleFormSubmit = (formData) => {
+    // Call your API to submit the form data
+    // You can use the fetch API or Axios here
+
+    console.log("Form Data:", formData);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <h1>Yoga Class Registration</h1> */}
+      <Form onSubmit={handleFormSubmit} />
     </div>
   );
-}
+};
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
