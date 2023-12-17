@@ -12,6 +12,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // client-side validation
+    console.log(validationErrors);
     const errors = {};
     if (!isValidName(name)) {
       errors.mes = 'Please enter a valid name';
