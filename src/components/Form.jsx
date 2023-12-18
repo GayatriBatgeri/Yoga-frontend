@@ -7,7 +7,7 @@ const Form = () => {
   const [gender, setGender] = useState('');
   const [batch, setBatch] = useState('');
   const [email, setEmail] = useState('');
-  const [showPaymentConfirmation, setShowPaymentConfirmation] = useState(false); // Set to false initially
+  const [showPaymentConfirmation, setShowPaymentConfirmation] = useState(false); 
   const [validationErrors, setValidationErrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ const Form = () => {
 
     try{
         //fetching API from backend
-        const response = await fetch('https://yoga-registration-yc67.onrender.com/api/register' , {
+        const response = await fetch('https://yoga-registration-mvcs.onrender.com/api/register' , {
             method:'POST',
             headers:{
                 'content-type':'application/json',
@@ -69,7 +69,7 @@ const Form = () => {
         }
             );
             const responseData = await response.json();
-            alert(`Bravo ${responseData.participant.name} your ${responseData.message}`);
+            alert(`Bravo ${name} your ${responseData.message}`);
             // console.log('API Response : ',responseData);
             resetForm();
 
