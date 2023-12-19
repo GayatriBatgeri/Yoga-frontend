@@ -55,7 +55,7 @@ const Form = () => {
 
     try{
         //fetching API from backend
-        const response = await fetch('https://yoga-registration-mvcs.onrender.com/api/register' , {
+        const response = await fetch('http://localhost:3307/api/register' , {
             method:'POST',
             headers:{
                 'content-type':'application/json',
